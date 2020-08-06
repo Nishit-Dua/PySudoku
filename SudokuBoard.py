@@ -103,7 +103,7 @@ def sudoku(board):
     return False
 
 
-if __name__ == "__main__":
+def create_board():
     now = time.time()
     x = np.zeros([9, 9], int)
 
@@ -111,4 +111,10 @@ if __name__ == "__main__":
         sudoku(x)
 
     print_board(x)
-    print(f'\nGenerated a Sudoku Board in {(time.time() - now): .3f} seconds')
+    print(f'\nGenerated a Sudoku Board in {(time.time() - now): .4f} seconds')
+    return x
+
+
+if __name__ == "__main__":
+
+    x = create_board()
